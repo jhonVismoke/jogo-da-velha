@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.board-game{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(15, 13, 32);
+}
+
+span{
+  width: 33.33333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 2rem;
+  position: relative;
+  outline: 1px solid white;
+}
+
+span:hover{
+  background-color: rgb(30, 26, 66);
+  cursor: pointer;
+}
+
+/* Pseudo-elemento ::after padrão */
+span::after {
+  content: '';
+  display: none;
+  width: 180%;
+  height: 10px;
+  background: rgb(255, 255, 255);
+  position: absolute;
+  z-index: 100;
+}
+
+/* Modificador .horizontal */
+.horizontal::after {
+  display: block;
+}
+
+/* Modificador .vertical */
+.vertical::after {
+  display: block;
+  transform: rotate(90deg);
+}
+
+/* Modificador .diagonal-1 */
+.diagonal-1::after {
+  display: block;
+  transform: rotate(45deg);
+}
+
+/* Modificador .diagonal-2 */
+.diagonal-2::after {
+  display: block;
+  transform: rotate(135deg);
+}
+
+
+abbr{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: aliceblue;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
