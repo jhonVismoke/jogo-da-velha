@@ -15,6 +15,7 @@
 }
 
 span{
+  min-height: auto;
   width: 33.33333%;
   display: flex;
   align-items: center;
